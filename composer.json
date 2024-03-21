@@ -1,0 +1,19 @@
+{
+    "name": "yorts/xendit",
+    "description": "A Laravel package for seamless integration with third-party payment gateways or payout services via APIs. Simplify handling payments and payouts securely in your Laravel applications.",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Yorts\\Xendit\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "LazyCode404",
+            "email": "troyventura00@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}
