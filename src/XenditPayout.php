@@ -90,7 +90,10 @@ class XenditPayout{
             'query' => ['reference_id' => $reference_id]
         ]);
 
-        return $response->getBody();
+        $body = $response->getBody()->getContents();
+        $decodedBody = json_decode($body, true);
+
+        return $decodedBody;
     }
 
     public function getPayoutId(string $id){
