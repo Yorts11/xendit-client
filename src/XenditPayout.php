@@ -86,7 +86,9 @@ class XenditPayout{
     }
 
     public function getPayoutReferenceId(string $reference_id){
-        $response = $this->client->get('payouts?reference_id='.$reference_id);
+        $response = $this->client->get('payouts', [
+            'query' => ['reference_id' => $reference_id]
+        ]);
 
         return $response->getBody();
     }
