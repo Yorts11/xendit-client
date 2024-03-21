@@ -84,4 +84,15 @@ class XenditPayout{
 
         return $response->getBody();
     }
+
+    public function getPayoutReferenceId(string $reference_id){
+        $response = $this->client->get('payouts?reference_id='.$reference_id);
+
+        return $response->getBody();
+    }
+
+    public function getPayoutId(string $id){
+        $response = $this->client->get('payouts/'.$id);
+        return $response->getBody();
+    }
 }
