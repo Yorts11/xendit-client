@@ -28,42 +28,42 @@ class XenditPayout{
                 'error_code' => '400',
                 'message' => 'Reference ID is required and cannot be empty.'
             ];
-            return response()->json($errorResponse);
+            return json_encode($errorResponse);
         }
         if(!isset($params['channel_code']) || empty($params['channel_code'])){
             $errorResponse = [
                 'error_code' => '400',
                 'message' => 'Channel Code is required and cannot be empty.'
             ];
-            return response()->json($errorResponse);
+            return json_encode($errorResponse);
         }
         if(!isset($params['channel_properties']['account_holder_name']) || empty($params['channel_properties']['account_holder_name'])){
             $errorResponse = [
                 'error_code' => '400',
                 'message' => 'Account Holder Name is required and cannot be empty.'
             ];
-            return response()->json($errorResponse);
+            return json_encode($errorResponse);
         }
         if(!isset($params['channel_properties']['account_number']) || empty($params['channel_properties']['account_number'])){
             $errorResponse = [
                 'error_code' => '400',
                 'message' => 'Account Number is required and cannot be empty.'
             ];
-            return response()->json($errorResponse);
+            return json_encode($errorResponse);
         }
         if(!isset($params['amount']) || empty($params['amount'])){
             $errorResponse = [
                 'error_code' => '400',
                 'message' => 'Amount is required and cannot be empty.'
             ];
-            return response()->json($errorResponse);
+            return json_encode($errorResponse);
         }
         if(!isset($params['currency']) || empty($params['currency'])){
             $errorResponse = [
                 'error_code' => '400',
                 'message' => 'Currency is required and cannot be empty.'
             ];
-            return response()->json($errorResponse);
+            return json_encode($errorResponse);
         }
 
         $requestParams = [
