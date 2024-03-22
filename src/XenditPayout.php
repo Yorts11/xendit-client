@@ -113,6 +113,7 @@ class XenditPayout{
     }
 
     public function getPayoutChannels(string $currency = null, string $channel_category = null){
+        $response = null;
         if(isset($currency) || !empty($currency) && isset($channel_category) || !empty($channel_category)){
             $response = $this->client->get('payouts_channels',[
                 'query' => ['currency' => $currency, 'channel_category' => $channel_category]
@@ -129,9 +130,13 @@ class XenditPayout{
             ]);
         }
 
-        $body = $response->getBody()->getContents();
-        $decodedBody = json_decode($body, true);
-
-        return $decodedBody;
+        if ($response) {
+            $body = $response->getBody()->getContents();
+            $decodedBody = json_decode($body, true);
+            return $decodedBody;
+        } else {
+            // Handle the case where $response is still null
+            return []; // or throw an exception, log an error, etc.
+        }
     }
 }
