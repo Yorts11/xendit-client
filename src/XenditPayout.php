@@ -98,6 +98,9 @@ class XenditPayout{
 
     public function getPayoutId(string $id){
         $response = $this->client->get('payouts/'.$id);
-        return $response->getBody();
+        $body = $response->getBody()->getContents();
+        $decodedBody = json_decode($body, true);
+
+        return $decodedBody;
     }
 }
