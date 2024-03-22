@@ -98,22 +98,50 @@ class XenditPayout{
     }
 
     public function getPayoutReferenceId(string $reference_id){
-        $response = $this->client->get('payouts', [
-            'query' => ['reference_id' => $reference_id]
-        ]);
+        try{
+            $response = $this->client->get('payouts', [
+                'query' => ['reference_id' => $reference_id]
+            ]);
 
-        $body = $response->getBody()->getContents();
-        $decodedBody = json_decode($body, true);
+            $body = $response->getBody()->getContents();
+            $decodedBody = json_decode($body, true);
 
-        return $decodedBody;
+            return $decodedBody;
+        }catch (ClientException $e){
+            $response = $e->getResponse();
+            $statusCode = $response->getStatusCode();
+            $body = $response->getBody()->getContents();
+            $decodedBody = json_decode($body, true);
+
+            // Handle the error and return the error message
+            return [
+                'error' => true,
+                'status_code' => $statusCode,
+                'message' => $decodedBody['message']
+            ];
+        }
     }
 
     public function getPayoutId(string $id){
-        $response = $this->client->get('payouts/'.$id);
-        $body = $response->getBody()->getContents();
-        $decodedBody = json_decode($body, true);
+        try{
+            $response = $this->client->get('payouts/'.$id);
+            $body = $response->getBody()->getContents();
+            $decodedBody = json_decode($body, true);
 
-        return $decodedBody;
+            return $decodedBody;
+        }catch(ClientException $e){
+            $response = $e->getResponse();
+            $statusCode = $response->getStatusCode();
+            $body = $response->getBody()->getContents();
+            $decodedBody = json_decode($body, true);
+
+            // Handle the error and return the error message
+            return [
+                'error' => true,
+                'status_code' => $statusCode,
+                'message' => $decodedBody['message']
+            ];
+        }
     }
 
     public function payoutCancel(string $id){
