@@ -73,9 +73,6 @@ The reponse will contain a payout details
 ### Retrieving Payout by ID
 ```php
     $id = 'disb-48ee0751-abb3-4df5-85c7-24bcd3fabdec';
-<<<<<<< HEAD
     // will return all payout based on xendit transaction id
-=======
->>>>>>> bdeb8b8781b02142230918ca69afb3192119ffce
     dd($client->getPayoutId($id));
 ```
