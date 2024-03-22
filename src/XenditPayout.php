@@ -2,6 +2,7 @@
 namespace Yorts\Xendit;
 use GuzzleHttp\Client;
 use Psr\Http\Message\ResponseInterface;
+use GuzzleHttp\Exception\ClientException;
 
 class XenditPayout{
     const API_BASE = 'https://api.xendit.co/v2/';
@@ -105,11 +106,25 @@ class XenditPayout{
     }
 
     public function payoutCancel(string $id){
-        $response = $this->client->post('payouts/'.$id.'/cancel');
-        $body = $response->getBody()->getContents();
-        $decodedBody = json_decode($body, true);
+        try {
+            $response = $this->client->post('payouts/'.$id.'/cancel');
+            $body = $response->getBody()->getContents();
+            $decodedBody = json_decode($body, true);
 
-        return $decodedBody;
+            return $decodedBody;
+        } catch (ClientException $e) {
+            $response = $e->getResponse();
+            $statusCode = $response->getStatusCode();
+            $body = $response->getBody()->getContents();
+            $decodedBody = json_decode($body, true);
+
+            // Handle the error and return the error message
+            return [
+                'error' => true,
+                'status_code' => $statusCode,
+                'message' => $decodedBody['message'] ?? 'Error occurred during payout cancellation.'
+            ];
+        }
     }
 
     public function getPayoutChannels(string $currency = null, string $channel_category = null){
