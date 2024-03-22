@@ -1,6 +1,6 @@
 {
     "name": "yorts/xendit",
-    "description": "A package for seamless integration with third-party payment gateways or payout services via APIs. Simplify handling payments and payouts securely in your Laravel applications.",
+    "description": "A package for seamless integration with third-party payment gateways or payout services via APIs. Simplify handling payments and payouts securely in your PHP applications.",
     "type": "library",
     "license": "MIT",
     "autoload": {
