@@ -11,12 +11,12 @@ class XenditPayout{
     protected $client;
     public $url;
 
-    public function __construct($apiKey)
+    public function __construct($apiKey, $url = null)
     {
         $url = null;
-        $this->apiKey = $apiKey;
+        $this->url = $url ?? self::API_BASE;
         $this->client = new Client([
-            'base_uri' => $url == null ? self::API_BASE : $url,
+            'base_uri' => $this->url,
             'headers' => [
                 'Authorization' => 'Basic ' . base64_encode($apiKey . ':'),
                 'Idempotency-key' => time(),
@@ -132,7 +132,7 @@ class XenditPayout{
     public function getPayoutChannels(string $currency = null, string $channel_category = null){
         $query = [];
 
-        $this->url = 'https://api.xendit.co/payouts_channels';
+        $this->url = 'https://api.xendit.co';
 
         if (!empty($currency)) {
             $query['currency'] = $currency;
@@ -142,7 +142,7 @@ class XenditPayout{
             $query['channel_category'] = $channel_category;
         }
 
-        $response = $this->client->get('payouts_channels', [
+        $response = $this->client->get($this->url.'/payouts_channels', [
             'query' => $query
         ]);
 
