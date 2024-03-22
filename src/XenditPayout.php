@@ -69,7 +69,7 @@ class XenditPayout{
         }
 
         $requestParams = [
-            'form_params' => [
+            'json' => [
                 'apikey' => $this->apiKey,
                 'reference_id' => $params['reference_id'],
                 'channel_code' => $params['channel_code'],
