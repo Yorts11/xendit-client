@@ -64,4 +64,14 @@ The reponse will contain a payout details
     }
 
 ```
-
+### Retrieving Payout by Reference ID
+```php
+    $reference_id = 'sample-payout-123';
+    // will return all payout based on your reference id
+    dd($client->getPayoutReferenceId($reference_id));
+```
+### Retrieving Payout by ID
+```php
+    $id = 'disb-48ee0751-abb3-4df5-85c7-24bcd3fabdec';
+    dd($client->getPayoutId($id));
+```
