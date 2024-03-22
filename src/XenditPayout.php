@@ -103,4 +103,35 @@ class XenditPayout{
 
         return $decodedBody;
     }
+
+    public function payoutCancel(string $id){
+        $response = $this->client->get('payouts/'.$id.'/cancel');
+        $body = $response->getBody()->getContents();
+        $decodedBody = json_decode($body, true);
+
+        return $decodedBody;
+    }
+
+    public function getPayoutChannels(string $currency = null, string $channel_category = null){
+        if(isset($currency) || !empty($currency) && isset($channel_category) || !empty($channel_category)){
+            $response = $this->client->get('payouts_channels',[
+                'query' => ['currency' => $currency, 'channel_category' => $channel_category]
+            ]);
+        }
+        if(isset($channel_category) || !empty($channel_category)){
+            $response = $this->client->get('payouts_channels',[
+                'query' => ['channel_category' => $channel_category]
+            ]);
+        }
+        if(isset($currency) || !empty($currency)){
+            $response = $this->client->get('payouts_channels',[
+                'query' => ['currency' => $currency]
+            ]);
+        }
+
+        $body = $response->getBody()->getContents();
+        $decodedBody = json_decode($body, true);
+
+        return $decodedBody;
+    }
 }
