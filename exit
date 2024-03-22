@@ -1,0 +1,95 @@
+[33mcommit 47304f2cc6170d1ab3f6fc5a117ff58f3428e397[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;33mtag: v1.0.0[m[33m)[m
+Author: LazyCode404 <troyventura00@gmail.com>
+Date:   Fri Mar 22 10:52:53 2024 +0800
+
+    Fix creating payout
+
+[33mcommit 3bddf2054ee42c67326bdb4222c6b2a75b203745[m[33m ([m[1;33mtag: v1.1.4[m[33m, [m[1;31morigin/master[m[33m)[m
+Author: LazyCode404 <troyventura00@gmail.com>
+Date:   Fri Mar 22 09:58:59 2024 +0800
+
+    Fix get channels
+
+[33mcommit 3a576adbb761b93329b7a38dd87e397d9faf9f7b[m[33m ([m[1;33mtag: v1.1.3[m[33m)[m
+Author: LazyCode404 <troyventura00@gmail.com>
+Date:   Fri Mar 22 09:47:58 2024 +0800
+
+    Fix get channels
+
+[33mcommit edbe6b869d6cf57a5726d988296d85c7d2f13c7c[m[33m ([m[1;33mtag: v1.1.2[m[33m)[m
+Author: LazyCode404 <troyventura00@gmail.com>
+Date:   Fri Mar 22 09:40:40 2024 +0800
+
+    Fix get channels
+
+[33mcommit 09fc870f09dff00f038436e071cb2306e31c03ef[m[33m ([m[1;33mtag: v1.1.1[m[33m)[m
+Author: LazyCode404 <troyventura00@gmail.com>
+Date:   Fri Mar 22 09:35:11 2024 +0800
+
+    Fix cancel and channels
+
+[33mcommit c29a2e8dd9037a6c753233ddb593822fca8c98e5[m[33m ([m[1;33mtag: v1.1.0[m[33m)[m
+Author: LazyCode404 <troyventura00@gmail.com>
+Date:   Fri Mar 22 09:31:17 2024 +0800
+
+    Fix cancel and channels
+
+[33mcommit 26e21c3610ff27c23772ac3020d51d7f78540f47[m[33m ([m[1;33mtag: v1.0.9[m[33m)[m
+Author: LazyCode404 <troyventura00@gmail.com>
+Date:   Fri Mar 22 09:24:21 2024 +0800
+
+    Fix get payout channels
+
+[33mcommit e864bef41da9364528730f76b35cf8566403b9ed[m[33m ([m[1;33mtag: v1.0.8[m[33m)[m
+Author: LazyCode404 <troyventura00@gmail.com>
+Date:   Fri Mar 22 09:20:57 2024 +0800
+
+    Add aditional Payout functions
+
+[33mcommit 31d9bd2703da4f0d6f149441ac36f373d9a0c295[m[33m ([m[1;33mtag: v1.0.7[m[33m)[m
+Author: LazyCode404 <troyventura00@gmail.com>
+Date:   Fri Mar 22 09:10:51 2024 +0800
+
+    fix get data
+
+[33mcommit 31c94e8745dd26aff5a91cd733d65f7aca4037a1[m[33m ([m[1;33mtag: v1.0.6[m[33m)[m
+Author: LazyCode404 <troyventura00@gmail.com>
+Date:   Fri Mar 22 02:16:38 2024 +0800
+
+    fix get data
+
+[33mcommit 9569d1debd97e87afe38c8c0edc49252d6f40b0c[m[33m ([m[1;33mtag: v1.0.5[m[33m)[m
+Author: LazyCode404 <troyventura00@gmail.com>
+Date:   Fri Mar 22 02:13:06 2024 +0800
+
+    fix get data
+
+[33mcommit d859c2bbfbb1e679a356d3c02742944b0338c4f0[m[33m ([m[1;33mtag: v1.0.4[m[33m)[m
+Author: LazyCode404 <troyventura00@gmail.com>
+Date:   Fri Mar 22 02:01:35 2024 +0800
+
+    Add getting payout data
+
+[33mcommit 7abc1525daf2ee72a0fd722774bdad40d86c266d[m[33m ([m[1;33mtag: v1.0.3[m[33m)[m
+Author: LazyCode404 <troyventura00@gmail.com>
+Date:   Fri Mar 22 01:48:54 2024 +0800
+
+    Fix Response
+
+[33mcommit f1419ea1b226a9b808e51d6740b5a8b3192b02d1[m[33m ([m[1;33mtag: v1.0.2[m[33m)[m
+Author: LazyCode404 <troyventura00@gmail.com>
+Date:   Fri Mar 22 01:38:44 2024 +0800
+
+    Fix Response
+
+[33mcommit 53250c24654b5f1db0b62df4fba1b260acbc0d88[m
+Author: LazyCode404 <troyventura00@gmail.com>
+Date:   Fri Mar 22 01:34:08 2024 +0800
+
+    Fix Response
+
+[33mcommit 03bb19a1604f3a3025a545b3c434faafaf84c13d[m
+Author: LazyCode404 <troyventura00@gmail.com>
+Date:   Fri Mar 22 01:20:54 2024 +0800
+
+    First Commit

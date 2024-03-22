@@ -75,12 +75,20 @@ class XenditPayout{
                 'channel_code' => $params['channel_code'],
                 'channel_properties' => $params['channel_properties'],
                 'amount' => $params['amount'],
-                'description' => $params['description'],
                 'currency' => $params['currency'],
-                'receipt_notification' => $params['receipt_notification'],
-                'metadata' => $params['metadata'],
+                'description' => $params['description'],
             ]
         ];
+
+        // Check if receipt_notification is provided and not empty
+        if (isset($params['receipt_notification']) && !empty($params['receipt_notification'])) {
+            $requestParams['json']['receipt_notification'] = $params['receipt_notification'];
+        }
+
+        // Check if metadata is provided and not empty
+        if (isset($params['metadata']) && !empty($params['metadata'])) {
+            $requestParams['json']['metadata'] = $params['metadata'];
+        }
 
         $response = $this->client->post('payouts', $requestParams);
 
