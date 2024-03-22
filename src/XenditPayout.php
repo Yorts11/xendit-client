@@ -92,7 +92,9 @@ class XenditPayout{
 
         $response = $this->client->post('payouts', $requestParams);
 
-        return $response->getBody();
+        $body = $response->getBody()->getContents();
+        $decodedBody = json_decode($body, true);
+        return $decodedBody;
     }
 
     public function getPayoutReferenceId(string $reference_id){
